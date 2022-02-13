@@ -13,7 +13,9 @@ client.on('interactionCreate', async Interaction => {
 
     if (commandName === 'ping') {
         await Interaction.reply('Pong!');
+    } else if (commandName === 'server') {
+        await Interaction.reply(`サーバー名: ${Interaction.guild.name}\n参加人数: ${Interaction.guild.memberCount}`)
     }
 })
 
-client.login(token)
+client.login(token);
